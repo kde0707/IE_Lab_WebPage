@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Blog</title>
-    <link href="{% static 'blog/bootstrap/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <link href="./bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/e752802a8c.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -78,22 +77,27 @@
             <div class="col-md-8 col-lg-9">
                 <h1>Blog</h1>
 
-                {% for p in post_list %}
                 <!-- Blog post-->
                 <div class="card mb-4">
-                    <img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." />
+                    <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
                     <div class="card-body">
-                        <h2 class="card-title h4">{{ p.title }}</h2>
-                        <p class="card-text">{{ p.content }}</p>
-                        <a class="btn btn-primary" href="{{ p.get_absolute_url }}">Read more →</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Posted on {{ p.created_at }} by
-                        <a href="#">작성자명 쓸 위치(개발예정)</a>
+                        <div class="small text-muted">January 1, 2022</div>
+                        <h2 class="card-title h4">Post Title</h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
+                        <a class="btn btn-primary" href="#!">Read more →</a>
                     </div>
                 </div>
-                {% endfor %}
-
+                
+                <!-- Blog post-->
+                <div class="card mb-4">
+                    <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                    <div class="card-body">
+                        <div class="small text-muted">January 1, 2022</div>
+                        <h2 class="card-title h4">Post Title</h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
+                        <a class="btn btn-primary" href="#!">Read more →</a>
+                    </div>
+                </div>
 
                 <!-- Pagination -->
                 <ul class="pagination justify-content-center my-4">
