@@ -6,8 +6,8 @@ from .models import Post
 class PostList(ListView):
     model = Post
     ordering = '-pk'
-    template_name = 'blog/index.html'
+    template_name = 'blog/blog_list.html'
 
 class PostDetail(DetailView):
     model = Post
-    template_name = 'blog/single_post_page.html'
+    template_name = 'blog/blog_detail.html'

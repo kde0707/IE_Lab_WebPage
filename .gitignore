@@ -6,3 +6,4 @@ db.sqlite3-journal
 */db.sqlite3-journal/*
 *.pyc
 migrations/
+_media/

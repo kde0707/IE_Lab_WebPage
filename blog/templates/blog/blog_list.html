@@ -10,17 +10,17 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand" href="./index.html">IE Lab</a>
+          <a class="navbar-brand" href="./blog_list.html">IE Lab</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./blog_list.html">Blog</a>
+                <a class="nav-link" href="/blog">Blog</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">About us</a>
@@ -81,7 +81,7 @@
                 {% for p in post_list %}
                 <!-- Blog post-->
                 <div class="card mb-4">
-                    <img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." />
+                    <img class="card-img-top" src="{{ p.head_image.url }}" alt="..." />
                     <div class="card-body">
                         <h2 class="card-title h4">{{ p.title }}</h2>
                         <p class="card-text">{{ p.content }}</p>
