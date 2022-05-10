@@ -1,63 +1,49 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>IE Lab</title>
     <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'pages/css/landing.css' %}" media="screen">
     <script src="https://kit.fontawesome.com/e752802a8c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    {% include 'blog/navbar.html' %}
+
+    <section>
         <div class="container">
-          <a class="navbar-brand" href="./index.html">IE Lab</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./blog_list.html">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About us</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-                  Dropdown link
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+            <div class="row justify-content-between">
+                <div class="col-lg-6 text-light">
+                    <h1 class="mt-5">Welcome to IE Lab</h1>
+                    <p>안녕하세요. IE Lab(지능공학연구실) 홈페이지 입니다.
+                    <br>간단한 연구실 소개와 진행중인 프로젝트 및 활동내역이 있습니다.</p>
                 </div>
-              </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Log In</a>
-              </li>
-          </ul>
-          </div>
-        </div>
-  </nav>
 
-    <h1>IE Lab(지능공학연구실) 홈페이지 입니다.</h1>
-    <h2>h2h2h2</h2>
-    <h3>h3h3h3테스트테스트테스트</h3>
+                <div class="col-lg-5 mt-5">
+                    <h2 class="text-light">Board - Recent Posts</h2>
+                    {% for post in recent_posts %}
+                        <div class="card mt-1">
+                            <div class="card-body">
+                                <h6><a href="{{ post.get_absolute_url }}" class="text-decoration-none text-dark">
+                                    {{ post.title }}
+                                </a></h6>
+                                <span class="badge badge-pill badge-light float-right">
+                                {{ post.created_at }}
+                            </span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
 
-    <!-- Footer-->
-    <footer class="py-5 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">
-                Copyright &copy; IE Lab WebSite 2022
-                <br>Made by 20171184 Minseok Song
-            </p>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <div class="fixed-bottom">
+        {% include 'blog/footer.html' %}
+    </div>
+
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
