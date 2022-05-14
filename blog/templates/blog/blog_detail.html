@@ -15,7 +15,12 @@
             <a href="#"> {{ post.author | upper }}</a>
         </p>
         <hr>
-        <!-- Post meta content-->
+
+        {% if user.is_authenticated and user == post.author %}
+            <a class="btn btn-info btn-sm float-right" href="/blog/update_post/{{ post.pk }}/"
+               role="button"><i class="fas fa-pen"></i>&nbsp;&nbsp;Edit Post</a>
+        {% endif %}
+
         <!-- Date/Time -->
         <div class="text-muted fst-italic mb-2">{{ post.created_at }}</div>
         <hr>
