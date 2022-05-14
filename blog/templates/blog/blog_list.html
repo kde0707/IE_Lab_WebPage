@@ -1,7 +1,16 @@
 {% extends 'blog/base.html' %}
 
 {% block main_area %}
-    <h1>게시판 개발중..</h1>
+
+    {% if user.is_authenticated %}
+        {% if user.is_superuser or user.is_staff %}
+            <a class="btn btn-info btn-sm float-right" href="/blog/create_post/" role="button">
+            <i class="fas fa-pencil"></i>
+                &nbsp;&nbsp;게시글 작성</a>
+            <br><br>
+        {% endif %}
+    {% endif %}
+
     {% if post_list.exists %}
         {% for p in post_list %}
             <!-- Blog post-->
