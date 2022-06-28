@@ -17,8 +17,10 @@
             <div class="card mb-4">
                 {% if p.head_image %}
                     <img class="card-img-top" src="{{ p.head_image.url }}" alt="{{ p }} head image" />
+                {% comment %}
                 {% else %}
                     <img class="card-img-top" src="https://picsum.photos/seed/{{ p.id }}/850/350" alt="random image"/>
+                {% endcomment %}
                 {% endif %}
                 <div class="card-body">
                     <h2 class="card-title h4">{{ p.title }}</h2>

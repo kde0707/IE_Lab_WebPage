@@ -18,3 +18,21 @@ def about_us(request):
         request,
         'pages/about_us.html'
     )
+
+def research(request):
+    return render(
+        request,
+        'pages/research.html'
+    )
+
+def publications(request):
+    return render(
+        request,
+        'pages/publications.html'
+    )
+
+def gallery(request):
+    return render(
+        request,
+        'pages/gallery.html'
+    )
