@@ -1,0 +1,35 @@
+.find-btn{
+	text-align: center;
+	margin-right: -12px;
+}
+.find-btn1{
+	margin-top:15px;
+	width:30%;
+	border-radius: 5px;
+	border: 0;
+	height:55px;
+	background-color:gray;
+	display: inline-block;
+    text-align:center;
+}
+.find-btn2{
+	margin-top:15px;
+	width:30%;
+	border-radius: 5px;
+	border: 0;
+	height:55px;
+	display: inline-block;
+	text-align:center;
+}
+
+.find-btn1:a{
+display: block;1
+}
+
+.find-btn1:hover{
+    font-weight:bold;
+}
+
+.find-btn2:hover{
+    font-weight:bold;
+}
