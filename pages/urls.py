@@ -6,5 +6,6 @@ urlpatterns = [
     path('research/', views.research),
     path('publications/', views.publications),
     path('gallery/', views.gallery),
-    path('', views.landing)
+    path('publicationsCon/', views.publicationsCon),
+    path('', views.landing),
 ]

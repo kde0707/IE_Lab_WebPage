@@ -36,3 +36,9 @@ def gallery(request):
         request,
         'pages/gallery.html'
     )
+
+def publicationsCon(request):
+    return render(
+        request,
+        'pages/publicationsCon.html'
+    )
