@@ -11,34 +11,34 @@
         {% endif %}
     {% endif %}
 
+    <h2>연구실 게시판</h2>
+    <br>
+    <table class="table-sm table-hover table-bordered">
+    <thead>
+    <tr>
+        <th style="width: 10%; text-align: center;">번호</th>
+        <th style="width: 50%; text-align: center;">제목</th>
+        <th style="width: 10%; text-align: center;">작성자</th>
+        <th style="width: 20%; text-align: center;">날짜</th>
+    </tr>
+    </thead>
+    <tbody class="table-group-divider">
     {% if post_list.exists %}
         {% for p in post_list %}
-            <!-- Blog post-->
-            <div class="card mb-4">
-                {% if p.head_image %}
-                    <img class="card-img-top" src="{{ p.head_image.url }}" alt="{{ p }} head image" />
-                {% comment %}
-                {% else %}
-                    <img class="card-img-top" src="https://picsum.photos/seed/{{ p.id }}/850/350" alt="random image"/>
-                {% endcomment %}
-                {% endif %}
-                <div class="card-body">
-                    <h2 class="card-title h4">{{ p.title }}</h2>
-                    {% if p.hook_text %}
-                        <h5 class="text-muted">{{ p.hook_text }}</h5>
-                    {% endif %}
-                    <p class="card-text">{{ p.get_content_markdown | truncatewords_html:50 | safe}}</p>
-                    <a class="btn btn-primary" href="{{ p.get_absolute_url }}">Read more →</a>
-                </div>
-                <div class="card-footer text-muted">
-                    Posted on {{ p.created_at }} by
-                    <a href="#">{{ p.author | upper }}</a>
-                </div>
-            </div>
-        {% endfor %}
+            <tr class="{% if forloop.counter %}{% endif %}">
+                <td style="text-align:center;">{{ forloop.counter }}</td>
+                <td style="text-align:center;"><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></td>
+                <td style="text-align:center;">{{ p.author | upper }}</td>
+                <td style="text-align:center;">{{ p.created_at }}</td>
+            </tr>
+            {% endfor %}
     {% else %}
         <h3>아직 게시물이 없습니다!</h3>
+        <br>
+        <br>
     {% endif %}
+            </tbody>
+    </table>
 
     {% if is_paginated %}
     <!-- Pagination -->
