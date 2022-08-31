@@ -1,7 +1,5 @@
 {% extends 'blog/base.html' %}
-
 {% block main_area %}
-
     {% if user.is_authenticated %}
         {% if user.is_superuser or user.is_staff %}
             <a class="btn btn-info btn-sm float-right" href="/blog/create_post/" role="button">
@@ -10,10 +8,23 @@
             <br><br>
         {% endif %}
     {% endif %}
-
-    <h2>연구실 게시판</h2>
+<section id="lab-page-title" class="page-title-parallax page-title-dark" style="background-image: url('/webdata/lab/hair/pageimage/6e2z95azd1dz87bzb45za8az67czd9dzb0dz353zf1.jpg');">
+  <div class="lab-overlay"></div>
+  <div class="overlay2"></div>
+  <div class="container clearfix">
+    <h1>연구실 게시판</h1>
+    <span class="hidden-xs hidden-sm ">Laboratory bulletin board</span>
+    <ol class ="ol-1">
+      <li style="display: inline-block;">Home /</li>
+      <li style="display: inline-block;">board /</li>
+      <li style="display: inline-block;">연구실 게시판</li>
+    </ol>
+  </div>
+</section>
+</section>
     <br>
-    <table class="table-sm table-hover table-bordered">
+<div class="board_list_wrap">
+    <table class="board_list table table-striped table-hover" style="border-top: 2px solid;">
     <thead>
     <tr>
         <th style="width: 10%; text-align: center;">번호</th>
@@ -22,24 +33,33 @@
         <th style="width: 20%; text-align: center;">날짜</th>
     </tr>
     </thead>
-    <tbody class="table-group-divider">
-    {% if post_list.exists %}
-        {% for p in post_list %}
-            <tr class="{% if forloop.counter %}{% endif %}">
-                <td style="text-align:center;">{{ forloop.counter }}</td>
-                <td style="text-align:center;"><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></td>
-                <td style="text-align:center;">{{ p.author | upper }}</td>
-                <td style="text-align:center;">{{ p.created_at }}</td>
-            </tr>
-            {% endfor %}
-    {% else %}
-        <h3>아직 게시물이 없습니다!</h3>
-        <br>
-        <br>
-    {% endif %}
-            </tbody>
+        <tbody class="table-group-divider">
+        {% if post_list.exists %}
+            {% for p in post_list %}
+                <tr class="{% if forloop.counter %}{% endif %}">
+                    <td style="text-align:center;">{{ forloop.counter }}</td>
+                    <td style="text-align:left; "><a style="color:black; " href="{{ p.get_absolute_url }}" >{{ p.title }}</a></td>
+                    <td style="text-align:center;">{{ p.author | upper }}</td>
+                    <td style="text-align:center;">{{ p.created_at }}</td>
+                </tr>
+                {% endfor %}
+        {% else %}
+            <h3>아직 게시물이 없습니다!</h3>
+            <br>
+            <br>
+        {% endif %}
+        </tbody>
     </table>
-
+<hr/>
+    <div class="page-1">
+        <a href="#">첫 페이지</a>
+        <a href="#">이전 페이지</a>
+        <a href="#">1</a>
+        <a href="#" style="">2</a>
+        <a href="#" style="">3</a>
+        <a href="#" style="">다음 페이지</a>
+        <a href="#" style="">마지막 페이지</a>
+    </div>
     {% if is_paginated %}
     <!-- Pagination -->
     <ul class="pagination justify-content-center my-4">
@@ -67,5 +87,5 @@
 
     </ul>
     {% endif %}
-
+</div>
 {% endblock %}

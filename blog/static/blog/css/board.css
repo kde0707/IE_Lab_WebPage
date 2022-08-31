@@ -1,0 +1,15 @@
+.ol-1 {position: absolute !important;
+    width: auto !important;
+    left: auto !important;
+    right: 15px !important;
+    margin: -10px 0 0 0 !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    font-size: 12px;}
+
+.page-1 {
+margin-top: 400px;
+            text-align: center;
+            font-size: 15px;
+            border: 1px solid #000;
+}
