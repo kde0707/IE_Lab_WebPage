@@ -32,7 +32,7 @@ DEBUG = True
 # else:
 #     ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['0.0.0.0:8000', 'localhost', '127.0.0.1', '210.119.104.132']
+ALLOWED_HOSTS = ['0.0.0.0:8000', 'localhost', '127.0.0.1', '210.119.104.132', 'ielab.hoseo.ac.kr']
 
 
 # Application definition
