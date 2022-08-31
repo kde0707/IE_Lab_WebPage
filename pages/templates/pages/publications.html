@@ -8,83 +8,14 @@
         <title>IE Lab Publications</title>
 
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrappub.min.css' %}" media="screen">
+<!--        <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrappub.min.css' %}" media="screen">-->
         <link rel="stylesheet" href="{% static 'blog/css/pub.css' %}" media="screen">
 
     </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="/">IE Lab</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/blog">Board</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/publications">Publications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/research">Research</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about_us">About us</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-                            More
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="/gallery">Gallery</a>
-                            <a class="dropdown-item" href="https://github.com/Hoseo-IELab" target='_blank'>GitHub</a>
-                        </div>
-                    </li>
-                    <!--
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Log In</a>
-                    </li>
-                    -->
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <body style="overflow-x: hidden">
+       {% include 'blog/navbar.html' %}
 
-    <!-- Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel"><i class="fa-solid fa-right-to-bracket"></i>&nbsp Log In</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="col-md-8">
-                            <button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="fa-brands fa-google"></i>&nbsp&nbsp Log in with Google</button>
-                            <button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="fa-solid fa-envelope"></i>&nbsp&nbsp&nbsp Log in with E-mail&nbsp</button>
-                            <button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="fa-solid fa-envelope"></i>&nbsp&nbsp Sign up with E-mail</button>
-                        </div>
-                        <div class="col"></div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-        <header class="pb-5 bg-image-full" style="background-image: url('http://ipsi.hoseo.ac.kr/dbimage/ipsi/design/2021/12/08/2021_visual03.jpg');">
+        <header class="pb-5 bg-image-full" style="padding-bottom: 21rem !important; margin-left: -60px !important; background-image: url('http://ipsi.hoseo.ac.kr/dbimage/ipsi/design/2021/12/08/2021_visual03.jpg');">
         </header>
         <!-- Content section-->
         <div class="find-btn">
@@ -92,36 +23,35 @@
     <button type="button" class="find-btn2" onclick="location.href='/publicationsCon'">Conference Papers</button>
 </div>
         <section class="py-5">
-            <div class="container my-5">
+            <div class="container" style="margin-bottom: 2rem!important;">
                 <h4>- Domestic</h4>
-                <div class="row justify-content-center" style="border:2px solid gray; border-radius: 10px; ">
-
-                    <div class="col-lg-6">
-
-                        <p><b>2022</b></p> <!-- 년도 -->
-                        <p class="lead">
+                <div class="row1" style="border:2px solid gray; border-radius: 10px; flex-wrap: wrap; margin-right: -15px; margin-left: -15px; margin-bottom: 20px;">
+                    <div class="col1" style="position: relative; width: 100%; padding-top: 5px; padding-bottom: 6px; padding-left: 15px; padding-right: 13px;">
+                        <p style="margin-top: 10px;margin-bottom: 0rem;"><b>2022</b></p> <!-- 년도 -->
+                        <p class="lead1">
                             Sang-Yub Lee, In-Pyo Cho and Chung-Pyo Hong, "Contactless Elevator Button Control System Based on Weighted K-NN Algorithm for AI Edge Computing Environment", Journal of Web Engineering, 2022 (SCIE)
                         </p> <!-- 내용 -->
                     </div>
                 </div>
             </div>
             <hr/> <!-- 헤드라인 -->
-            <div class="container my-5">
-                <h4>- Overseas</h4>
-                <div class="row justify-content-center" style="border:2px solid gray; border-radius: 10px; ">
-                    <div class="col-lg-6">
-                        <p><b>2022</b></p> <!-- 년도 -->
-                        <p class="lead">
+            <div class="container" style="margin-bottom: 2rem!important;">
+                <h4>- Domestic</h4>
+                <div class="row" style="border:2px solid gray; border-radius: 10px; flex-wrap: wrap; margin-right: -15px; margin-left: -15px; margin-bottom: 20px;">
+                    <div class="col" style="position: relative; width: 100%; padding-top: 5px; padding-bottom: 6px; padding-left: 15px; padding-right: 13px;">
+                        <p style="margin-top: 10px;margin-bottom: 0rem;"><b>2022</b></p> <!-- 년도 -->
+                        <p class="lead1">
                             Sang-Yub Lee, In-Pyo Cho and Chung-Pyo Hong, "Contactless Elevator Button Control System Based on Weighted K-NN Algorithm for AI Edge Computing Environment", Journal of Web Engineering, 2022 (SCIE)
                         </p> <!-- 내용 -->
                     </div>
                 </div>
             </div>
-            <div class="container my-5">
-                <div class="row justify-content-center" style="border:2px solid gray; border-radius: 10px; ">
-                    <div class="col-lg-6">
-                        <p><b>2022</b></p> <!-- 년도 -->
-                        <p class="lead">
+            <div class="container" style="margin-bottom: 2rem!important;">
+                <h4>- Domestic</h4>
+                <div class="row" style="border:2px solid gray; border-radius: 10px; flex-wrap: wrap; margin-right: -15px; margin-left: -15px; margin-bottom: 20px;">
+                    <div class="col" style="position: relative; width: 100%; padding-top: 5px; padding-bottom: 6px; padding-left: 15px; padding-right: 13px;">
+                        <p style="margin-top: 10px;margin-bottom: 0rem;"><b>2022</b></p> <!-- 년도 -->
+                        <p class="lead1">
                             Sang-Yub Lee, In-Pyo Cho and Chung-Pyo Hong, "Contactless Elevator Button Control System Based on Weighted K-NN Algorithm for AI Edge Computing Environment", Journal of Web Engineering, 2022 (SCIE)
                         </p> <!-- 내용 -->
                     </div>
