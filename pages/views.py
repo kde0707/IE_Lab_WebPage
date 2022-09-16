@@ -48,3 +48,5 @@ def publicationsPatents(request):
         request,
         'pages/publicationsPatents.html'
     )
+
+    
