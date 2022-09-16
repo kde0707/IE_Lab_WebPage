@@ -7,5 +7,6 @@ urlpatterns = [
     path('publications/', views.publications),
     path('gallery/', views.gallery),
     path('publicationsCon/', views.publicationsCon),
+    path('publicationsPatents/', views.publicationsPatents),
     path('', views.landing),
 ]

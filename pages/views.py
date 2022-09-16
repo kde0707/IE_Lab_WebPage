@@ -42,3 +42,9 @@ def publicationsCon(request):
         request,
         'pages/publicationsCon.html'
     )
+
+def publicationsPatents(request):
+    return render(
+        request,
+        'pages/publicationsPatents.html'
+    )
