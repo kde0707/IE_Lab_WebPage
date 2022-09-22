@@ -1,0 +1,43 @@
+.find-btn{
+	text-align: center;
+	margin-right: -12px;
+	margin-top: 4px;
+    margin-bottom: -26px;
+}
+.find-btn1{
+	margin-top:15px;
+	width:20%;
+	border-radius: 5px;
+	border: 0;
+	height:55px;
+	background-color:gray;
+	display: inline-block;
+    text-align:center;
+}
+
+.lead1 {
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.find-btn2{
+	margin-top:15px;
+	width:20%;
+	border-radius: 5px;
+	border: 0;
+	height:55px;
+	display: inline-block;
+	text-align:center;
+}
+
+
+.find-btn1:a{
+display: block;
+}
+
+.find-btn1:hover{
+    font-weight:bold;
+}
+
+.find-btn2:hover{
+    font-weight:bold;
+}
