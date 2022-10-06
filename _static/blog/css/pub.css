@@ -1,12 +1,13 @@
 .find-btn{
 	text-align: center;
-	margin-right: 0px;
+	margin-right: -12px;
 	margin-top: 4px;
     margin-bottom: -26px;
 }
-.find-btn1{
+.find-btnbk{
 	margin-top:15px;
-	width:20%;
+	margin-right:15px;
+	width:350px;
 	border-radius: 5px;
 	border: 0;
 	height:55px;
@@ -19,19 +20,22 @@
     font-weight: 300;
     margin-bottom: 5px;
 }
-.find-btn2{
+.find-btngr{
 	margin-top:15px;
-	width:30%;
+	margin-right:15px;
+	width:350px;
 	border-radius: 5px;
 	border: 0;
 	height:55px;
 	display: inline-block;
 	text-align:center;
 }
+
 
 .find-btn3{
 	margin-top:15px;
-	width:30%;
+	margin-right:15px;
+	width:250px;
 	border-radius: 5px;
 	border: 0;
 	height:55px;
@@ -39,15 +43,16 @@
 	text-align:center;
 }
 
-.find-btn1:a{
+
+.find-btngr:a{
 display: block;
 }
 
-.find-btn1:hover{
+.find-btnbk:hover{
     font-weight:bold;
 }
 
-.find-btn2:hover{
+.find-btngr:hover{
     font-weight:bold;
 }
 
